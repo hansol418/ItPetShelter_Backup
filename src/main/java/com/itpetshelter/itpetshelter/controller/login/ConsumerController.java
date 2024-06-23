@@ -1,6 +1,6 @@
 package com.itpetshelter.itpetshelter.controller.login;
 
-import com.itpetshelter.itpetshelter.domain.Consumer;
+import com.itpetshelter.itpetshelter.dto.login.ConsumerDTO;
 import com.itpetshelter.itpetshelter.service.login.ConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,13 +16,13 @@ public class ConsumerController {
 
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
-        model.addAttribute("consumer", new Consumer());
+        model.addAttribute("consumer", new ConsumerDTO());
         return "register";
     }
 
     @PostMapping("/register")
-    public String registerConsumer(Consumer consumer) {
-        consumerService.saveConsumer(consumer);
+    public String registerConsumer(ConsumerDTO consumerDTO) {
+        consumerService.saveConsumer(consumerDTO);
         return "redirect:/login";
     }
 

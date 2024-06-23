@@ -3,6 +3,8 @@ package com.itpetshelter.itpetshelter.config;
 
 import com.itpetshelter.itpetshelter.domain.Consumer;
 import com.itpetshelter.itpetshelter.domain.Manager;
+import com.itpetshelter.itpetshelter.dto.login.ConsumerDTO;
+import com.itpetshelter.itpetshelter.dto.login.ManagerDTO;
 import com.itpetshelter.itpetshelter.service.login.ConsumerService;
 import com.itpetshelter.itpetshelter.service.login.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +32,7 @@ public class CustomSecurityConfig {
     public UserDetailsService userDetailsService() {
         return username -> {
             if ("admin".equals(username)) {
-                Manager manager = managerService.findByMid(username);
+                ManagerDTO manager = managerService.findByMid(username);
                 if (manager != null) {
                     return org.springframework.security.core.userdetails.User
                             .withUsername(manager.getMid())
@@ -39,7 +41,7 @@ public class CustomSecurityConfig {
                             .build();
                 }
             } else {
-                Consumer consumer = consumerService.findByCid(username);
+                ConsumerDTO consumer = consumerService.findByCid(username);
                 if (consumer != null) {
                     return org.springframework.security.core.userdetails.User
                             .withUsername(consumer.getCid())
