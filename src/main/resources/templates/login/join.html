@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Join</title>
+</head>
+<body>
+<form th:action="@{/register}" method="post">
+    <div>
+        <label for="Cid">Username:</label>
+        <input type="text" id="Cid" name="Cid">
+    </div>
+    <div>
+        <label for="Cpw">Password:</label>
+        <input type="password" id="Cpw" name="Cpw">
+    </div>
+    <div>
+        <label for="Cname">Name:</label>
+        <input type="text" id="Cname" name="Cname">
+    </div>
+    <div>
+        <label for="Cphone">Phone:</label>
+        <input type="text" id="Cphone" name="Cphone">
+    </div>
+    <div>
+        <button type="submit">Join</button>
+    </div>
+</form>
+</body>
+</html>

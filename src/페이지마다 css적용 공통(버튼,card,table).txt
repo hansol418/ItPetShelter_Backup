@@ -1,0 +1,85 @@
+/* Google Fonts에서 Jua 폰트를 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+/* 버튼 스타일 */
+.searchBtn {
+    background-color: #007bff; /* 파란색 */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: 'Jua', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.searchBtn:hover {
+    background-color: #0056b3; /* 어두운 파란색 */
+}
+
+.updateBtn {
+    background-color: #007bff; /* 파란색 */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: 'Jua', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.updateBtn:hover {
+    background-color: #0056b3; /* 어두운 파란색 */
+}
+
+.clearBtn {
+    background-color: #dc3545; /* 빨간색 */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: 'Jua', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.clearBtn:hover {
+    background-color: #c82333; /* 어두운 빨간색 */
+}
+
+.listBtn {
+    background-color: #dc3545; /* 빨간색 */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: 'Jua', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.listBtn:hover {
+    background-color: #c82333; /* 어두운 빨간색 */
+}
+
+/* 카드 스타일 */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-family: 'Jua', sans-serif;
+}
+
+/* 테이블 스타일 */
+.table {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
